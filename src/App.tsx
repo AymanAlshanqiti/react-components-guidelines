@@ -1,6 +1,10 @@
+import Navbar from './components/Navbar';
+
 function App() {
 	return (
-		<div className="min-h-screen w-screen overflow-x-hidden">Hello There</div>
+		<div className="bg-white/5 h-screen">
+			<Navbar />
+		</div>
 	);
 }
 
