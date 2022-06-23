@@ -18,6 +18,7 @@ export enum ColorsEnum {
   Accent = 'accent',
   Muted = 'muted',
   White = 'white',
+  None = 'transparent'
 }
 
 export enum VariantsEnum {
@@ -25,6 +26,7 @@ export enum VariantsEnum {
   Outline = 'outline',
   Muted = 'muted',
   Link = 'link',
+  None = ''
 }
 
 export enum BorderRadiusEnum {

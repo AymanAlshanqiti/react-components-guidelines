@@ -17,14 +17,26 @@ export default {
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;
 
-export const component = Template.bind({});
-component.args = {
+export const firstComponent = Template.bind({});
+firstComponent.args = {
 	label: 'Click Me',
 	variant: VariantsEnum.Filled,
 	color: ColorsEnum.Primary,
 	size: SizesEnum.Medium,
 	borderRadius: BorderRadiusEnum.Small,
 	dir: DirectionEnum.LTR,
+	icon: <BsClipboardCheck />,
+	disabled: false,
+};
+
+export const secondComponent = Template.bind({});
+secondComponent.args = {
+	label: 'Click Me',
+	variant: VariantsEnum.Outline,
+	color: ColorsEnum.Primary,
+	size: SizesEnum.Large,
+	borderRadius: BorderRadiusEnum.Full,
+	dir: DirectionEnum.RTL,
 	icon: <BsClipboardCheck />,
 	disabled: false,
 };

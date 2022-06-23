@@ -107,11 +107,11 @@ export const Button = ({
 		>
 			{icon && label ? (
 				<>
-					<span className="inline-block">{icon}</span>
+					<span className="inline-block text-lg">{icon}</span>
 					<span className="inline-block">{label}</span>
 				</>
 			) : icon && !label ? (
-				<span className="inline-block">{icon}</span>
+				<span className="inline-block text-lg">{icon}</span>
 			) : (
 				<span className="inline-block">{label}</span>
 			)}
