@@ -1,15 +1,15 @@
 import React from 'react';
-import { Direction } from '../core/enums';
+import { DirectionEnum } from '../core/enums';
 
 export interface InputFieldProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {
-	dir?: Direction;
+	dir?: DirectionEnum;
 	hint?: string;
 	isValid?: boolean;
 }
 
 export default function InputField({
-	dir = Direction.LTR,
+	dir = DirectionEnum.LTR,
 	hint = '',
 	isValid = true,
 	...props

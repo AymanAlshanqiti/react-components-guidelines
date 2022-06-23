@@ -11,7 +11,7 @@ export default function Navbar() {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	return (
-		<nav className="bg-gray-800">
+		<nav className="bg-dark">
 			<div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
 				<div className="relative flex justify-between items-center h-16">
 					{/* Navbar burger menu and close icon */}
@@ -96,28 +96,6 @@ export default function Navbar() {
 					</div>
 
 					<div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:pr-0">
-						{/* notifications button */}
-						<button
-							type="button"
-							className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-						>
-							<svg
-								className="h-6 w-6"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								stroke="currentColor"
-								aria-hidden="true"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-								/>
-							</svg>
-						</button>
-
 						{/* profile user image icon */}
 						<div className="ml-3 relative">
 							<button
