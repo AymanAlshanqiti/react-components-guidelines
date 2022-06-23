@@ -11,7 +11,7 @@ export default function Navbar() {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	return (
-		<nav className="bg-dark">
+		<nav className="bg-muted-800">
 			<div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
 				<div className="relative flex justify-between items-center h-16">
 					{/* Navbar burger menu and close icon */}

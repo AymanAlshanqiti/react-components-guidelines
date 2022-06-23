@@ -25,7 +25,6 @@ export enum VariantsEnum {
   Outline = 'outline',
   Muted = 'muted',
   Link = 'link',
-  None = 'none',
 }
 
 export enum BorderRadiusEnum {

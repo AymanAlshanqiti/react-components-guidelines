@@ -8,7 +8,7 @@ import {
 
 export interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	value?: string;
+	label?: string;
 	size?: SizesEnum;
 	variant?: VariantsEnum;
 	color?: ColorsEnum;
@@ -18,7 +18,7 @@ export interface ButtonProps
 }
 
 export const Button = ({
-	value = '',
+	label = '',
 	size = SizesEnum.Medium,
 	variant = VariantsEnum.Filled,
 	color = ColorsEnum.Primary,
@@ -47,9 +47,9 @@ export const Button = ({
 			case VariantsEnum.Outline:
 				return `bg-transparent border border-${getButtonColorClasses()} text-${getButtonColorClasses()} hover:bg-${getButtonColorClasses()} hover:text-white focus:bg-${getButtonColorClasses()} focus:border-0 focus:text-white`;
 			case VariantsEnum.Link:
-				return `bg-transparent hover:text-${getButtonColorClasses()} hover:bg-${getButtonColorClasses()}-600 text-${getButtonColorClasses()}`;
+				return `bg-transparent hover:text-${getButtonColorClasses()}-700 hover:underline hover:underline-offset-8 text-${getButtonColorClasses()}`;
 			case VariantsEnum.Muted:
-				return `text-${getButtonColorClasses()}-900 hover:bg-opacity-80 bg-opacity-50 focus:ring-2 bg-muted`;
+				return `text-${getButtonColorClasses()}-700 hover:bg-opacity-80 hover:text-white bg-opacity-50 focus:ring-2 bg-muted`;
 			default:
 				return `bg-transparent hover:text-${getButtonColorClasses()}-600 text-${getButtonColorClasses()}`;
 		}
@@ -105,15 +105,15 @@ export const Button = ({
 				props.className
 			}`}
 		>
-			{icon && value ? (
+			{icon && label ? (
 				<>
 					<span className="inline-block">{icon}</span>
-					<span className="inline-block">{value}</span>
+					<span className="inline-block">{label}</span>
 				</>
-			) : icon && !value ? (
+			) : icon && !label ? (
 				<span className="inline-block">{icon}</span>
 			) : (
-				<span className="inline-block p-">{value}</span>
+				<span className="inline-block">{label}</span>
 			)}
 		</button>
 	);
