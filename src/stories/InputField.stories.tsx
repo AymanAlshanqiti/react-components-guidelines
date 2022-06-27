@@ -43,5 +43,6 @@ thiredComponent.args = {
 	'aria-label': 'First Name',
 	placeholder: 'Ayman',
 	isValid: true,
+	dir: 'rtl',
 	icon: <BsPerson />,
 };

@@ -1,8 +1,3 @@
-export enum DirectionEnum {
-  RTL = 'rtl',
-  LTR = 'ltr'
-}
-
 export enum SizesEnum {
   Small = 'sm',
   Medium = 'md',

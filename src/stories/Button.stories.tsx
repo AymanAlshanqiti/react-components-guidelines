@@ -5,7 +5,6 @@ import { Button, ButtonProps } from '../components/Button';
 import {
 	BorderRadiusEnum,
 	ColorsEnum,
-	DirectionEnum,
 	SizesEnum,
 	VariantsEnum,
 } from '../core/enums';
@@ -24,7 +23,7 @@ firstComponent.args = {
 	color: ColorsEnum.Primary,
 	size: SizesEnum.Medium,
 	borderRadius: BorderRadiusEnum.Small,
-	dir: DirectionEnum.LTR,
+	dir: 'ltr',
 	icon: <BsClipboardCheck />,
 	disabled: false,
 };
@@ -36,7 +35,7 @@ secondComponent.args = {
 	color: ColorsEnum.Primary,
 	size: SizesEnum.Large,
 	borderRadius: BorderRadiusEnum.Full,
-	dir: DirectionEnum.RTL,
+	dir: 'rtl',
 	icon: <BsClipboardCheck />,
 	disabled: false,
 };

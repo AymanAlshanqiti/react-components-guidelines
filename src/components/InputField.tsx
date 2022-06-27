@@ -1,10 +1,9 @@
 import React from 'react';
 import { BsCheck2, BsExclamationCircle, BsX } from 'react-icons/bs';
-import { DirectionEnum } from '../core/enums';
+import { getDirection } from '../core/helper';
 
 export interface InputFieldProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {
-	dir?: DirectionEnum;
 	hint?: string;
 	isValid?: boolean;
 	error?: string;
@@ -14,7 +13,6 @@ export interface InputFieldProps
 }
 
 export default function InputField({
-	dir = DirectionEnum.LTR,
 	hint = '',
 	isValid,
 	error = '',
@@ -59,7 +57,7 @@ export default function InputField({
 			return 'px-9';
 		}
 
-		if (dir === DirectionEnum.LTR) {
+		if (props.dir === 'ltr') {
 			return 'pr-9';
 		} else {
 			return 'pl-9';
@@ -67,7 +65,7 @@ export default function InputField({
 	};
 
 	return (
-		<div dir={dir}>
+		<div dir={props.dir}>
 			<div className="flex items-center justify-between">
 				<label className={`text-${getLabelColor()}`}>
 					{props['aria-label']}
@@ -90,7 +88,7 @@ export default function InputField({
 					{icon && (
 						<div
 							className={`absolute top-2 text-2xl text-secondary/70 ${
-								dir === DirectionEnum.LTR ? 'left-2' : 'right-2'
+								getDirection(props.dir) === 'ltr' ? 'left-2' : 'right-2'
 							}`}
 						>
 							{icon}
@@ -100,7 +98,7 @@ export default function InputField({
 					{/* validation and reset icons */}
 					<div
 						className={`absolute top-2 ${
-							dir === DirectionEnum.LTR ? 'right-2' : 'left-2'
+							getDirection(props.dir) === 'ltr' ? 'right-2' : 'left-2'
 						}`}
 					>
 						{isValid === undefined && !props?.value ? (

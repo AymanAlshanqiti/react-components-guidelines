@@ -1,7 +1,6 @@
 import {
 	BorderRadiusEnum,
 	ColorsEnum,
-	DirectionEnum,
 	SizesEnum,
 	VariantsEnum,
 } from '../core/enums';
@@ -14,7 +13,6 @@ export interface ButtonProps
 	color?: ColorsEnum;
 	icon?: JSX.Element;
 	borderRadius?: BorderRadiusEnum | string;
-	dir?: DirectionEnum;
 }
 
 export const Button = ({
@@ -24,7 +22,6 @@ export const Button = ({
 	color = ColorsEnum.Primary,
 	icon,
 	borderRadius = BorderRadiusEnum.None,
-	dir = DirectionEnum.LTR,
 	...props
 }: ButtonProps) => {
 	const getButtonSize = () => {
@@ -100,7 +97,7 @@ export const Button = ({
 	return (
 		<button
 			{...props}
-			dir={dir}
+			dir={props.dir}
 			className={`inline-flex items-center gap-2 ${getButtonSize()} ${getButtonVariantWithColor()} ${getButtonBorderRadiusClasses()} justify-center disabled:cursor-not-allowed disabled:opacity-40 ${
 				props.className
 			}`}
